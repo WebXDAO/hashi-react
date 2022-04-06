@@ -1,0 +1,1 @@
+type HSShapeSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'pill';
