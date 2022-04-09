@@ -1,54 +1,62 @@
 {
   "name": "@devprotocol/hashi-react",
   "version": "0.1.0",
+  "description": "UI component library using hashi",
   "private": true,
-  "files": ["./src"],
-  "dependencies": {
-    "@devprotocol/hashi": "1.0.0-beta",
-    "@fullhuman/postcss-purgecss": "4.1.3",
-    "@testing-library/jest-dom": "5.16.1",
-    "@testing-library/react": "12.1.2",
-    "@testing-library/user-event": "13.5.0",
-    "@types/jest": "27.4.0",
-    "@types/node": "16.11.21",
-    "@types/react": "17.0.38",
-    "@types/react-dom": "17.0.11",
-    "postcss": "8.4.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "5.0.0",
-    "sass": "1.49.11",
-    "typescript": "4.6.3",
-    "web-vitals": "2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "rollup": "rollup -c",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.10.1",
-    "@typescript-eslint/parser": "5.10.1",
-    "eslint": "8.8.0",
-    "eslint-plugin-react": "7.28.0"
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@storybook/addon-actions": "^6.4.21",
+    "@storybook/addon-essentials": "^6.4.21",
+    "@storybook/addon-interactions": "^6.4.21",
+    "@storybook/addon-links": "^6.4.21",
+    "@storybook/builder-webpack5": "^6.4.21",
+    "@storybook/manager-webpack5": "^6.4.21",
+    "@storybook/react": "^6.4.21",
+    "@storybook/testing-library": "^0.0.9",
+    "@testing-library/react": "^13.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^18.0.0",
+    "babel-jest": "^27.5.1",
+    "babel-loader": "^8.2.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "react": "^18.0.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3",
+    "@storybook/preset-scss": "^1.0.3",
+    "css-loader": "^6.7.1",
+    "react-dom": "^18.0.0",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0"
+  },
+  "peerDependencies": {},
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@devprotocol/hashi": "^1.0.0-rc"    
   }
 }
