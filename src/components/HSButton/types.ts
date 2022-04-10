@@ -1,12 +1,11 @@
 export interface HSButtonProps {
-  label: string;
   type?: ButtonVariant;
-  color?: ButtonColor;
+  state?: ButtonState;
   icon?: React.ReactElement | string;
   link?: string;
   onClick?: () => React.MouseEventHandler | void;
-  children?: React.ComponentType;
+  children?: React.ReactChild | string;
 }
 
 export type ButtonVariant = 'outlined' | 'filled';
-export type ButtonColor = 'success' | 'warning' | 'danger';
+export type ButtonState = 'success' | 'warning' | 'danger';

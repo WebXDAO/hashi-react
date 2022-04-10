@@ -1,29 +1,29 @@
 import React from 'react';
 import '../../styles/index.scss';
 
-import { ButtonVariant, HSButtonProps } from './types';
+import { HSButtonProps } from './types';
 
 const HSButton: React.FC<HSButtonProps> = ({
-  label = 'Click Me!',
-  icon,
+  icon = null,
   type = null,
-  color = null,
-  link,
+  state = null,
+  link = null,
   onClick,
-  children
+  children = 'Click Me'
 }) => {
   const ButtonBase: React.ReactElement = (
     <>
       {icon && <i className='hs-button__icon'>{icon}</i>}
-      {label || (children && <span className='hs-button__label'>{label}</span>)}
+      {<span className='hs-button__label'>{children}</span>}
     </>
   );
 
   if (!link || onClick) {
     return (
       <button
-        className={`hs-button ${type && 'is-' + type} ${color && 'is-' + color}`}
+        className={`hs-button ${type && 'is-' + type} ${state && 'is-' + state}`}
         onClick={onClick}
+        data-testid='test-hs-button-id'
       >
         {ButtonBase}
       </button>
@@ -33,7 +33,7 @@ const HSButton: React.FC<HSButtonProps> = ({
     return (
       <a
         href={link}
-        className={`hs-button ${type && 'is-' + type} ${color && 'is-' + color}`}
+        className={`hs-button ${type && 'is-' + type} ${state && 'is-' + state}`}
         target={isLinkExternal ? '_blank' : '_self'}
       >
         {ButtonBase}

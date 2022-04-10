@@ -9,7 +9,7 @@ export default {
 
 const Template: ComponentStory<typeof HSButton> = (args) => <HSButton {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Click me!'
+export const DefaultButton = Template.bind({});
+DefaultButton.args = {
+  onClick: () => alert('Button Clicked!')
 };
